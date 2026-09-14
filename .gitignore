@@ -5,3 +5,7 @@ data/
 *.db
 *.db-shm
 *.db-wal
+trace_logs/
+test_data/
+__pycache__/
+*.pyc
