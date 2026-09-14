@@ -45,20 +45,7 @@ async def chat(chat: ChatRequest, response: Response):
     try:
         thread_id = chat.thread_id or uuid.uuid4().hex
 
-        files_info = []
-        if chat.files:
-            files_info = [f.filename for f in chat.files]
-            logging.info(f"Document upload — thread_id={thread_id}, files={files_info}")
-
-        prompt = chat.prompt
-        if chat.files:
-            file_descriptions = "\n".join(
-                f"[Uploaded file: {f.filename} ({f.mime_type})]"
-                for f in chat.files
-            )
-            prompt = f"{prompt}\n{file_descriptions}" if prompt else file_descriptions
-
-        agent_response = await get_response(prompt, session_id=thread_id)
+        agent_response = await get_response(chat.prompt, session_id=thread_id)
 
         return {
             "response": agent_response,
