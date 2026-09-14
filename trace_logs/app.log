@@ -1,3 +1,5 @@
-2026-06-29 12:36:40,324 - root - INFO - Initialised Netra v0.1.95
-2026-06-29 12:36:40,588 - root - INFO - Starting application - initializing database
-2026-06-29 12:36:40,589 - root - INFO - Mock DB has been initialized successfully
+2026-09-14 05:13:30,299 - root - INFO - Initialised Netra v0.1.95
+2026-09-14 05:13:30,330 - root - INFO - Starting application - initializing database
+2026-09-14 05:13:30,330 - root - INFO - Mock DB has been initialized successfully
+2026-09-14 05:55:54,223 - root - INFO - Shutting down application
+2026-09-14 05:55:54,228 - LiteLLM - DEBUG - [LoggingWorker] atexit: No queue initialized
